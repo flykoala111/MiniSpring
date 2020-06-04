@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         id="WebApp_ID" version="2.5">
+    <display-name>fzj</display-name>
+    <!--springmvc DispatcherServlet-->
+    <servlet>
+        <servlet-name>miniSpringDisPatcherServlet</servlet-name>
+        <servlet-class>com.fzj.minispring.springmvc.DispatcherServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>miniSpringDisPatcherServlet</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+    <!--Context监听器-->
+    <listener>
+        <listener-class>com.fzj.minispring.spring.ContextListener</listener-class>
+    </listener>
+    <!--配置文件-->
+    <context-param>
+        <param-name>miniSpringPropertiesLocation</param-name>
+        <param-value>minispring.properties</param-value>
+    </context-param>
+</web-app>
