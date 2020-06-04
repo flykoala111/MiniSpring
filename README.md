@@ -1,0 +1,2 @@
+# MiniSpring
+simple spring projectstruct
