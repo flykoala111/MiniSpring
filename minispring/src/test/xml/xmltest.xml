@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fzjspringjdbc>
+<namespace targetname="test.mapper.xmltest"></namespace>
+<select id="sel" in="Map" out="Map">
+<sql>select * from fzj_bartical</sql>
+</select>
+<delete id="del" in="map">
+<sql>delete from a where id=1</sql>
+</delete>
+<update id="upd">
+<sql>update fzj_bartical set shortinfo=#{shortinfo},arname=#{areaname} where arid=2</sql>
+</update>
+</fzjspringjdbc>

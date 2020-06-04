@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fzjspringjdbc>
+<namespace targetname="fzjxml_b"></namespace>
+<select id="sel" in="Map" out="Map">
+<sql>select * from fzj_bartical where arid=#{arid}</sql>
+</select>
+<delete id="del" in="map">
+<sql>delete from a where id=1</sql>
+</delete>
+<insert id="ins" in="map">
+<sql>INSERT into fzj_bartical(arid,userid,arname,ardepath,artype,ardate,ispublic,shortinfo)
+ values(#{arid},#{userid},#{arname},#{ardepath},#{artype},#{ardate},#{ispublic},#{shortinfo})
+ </sql>
+</insert>
+</fzjspringjdbc>

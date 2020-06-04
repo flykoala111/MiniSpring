@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fzjspringjdbc>
+    <namespace targetname="test.mapper.fzjSystemMapper"></namespace>
+    <select id="selalltablename" in="Map" out="Map">
+        <sql>select table_name from information_schema.tables where table_schema=#{dbname}</sql>
+    </select>
+    <select id="selallcolumns" in="Map" out="Map">
+        <sql>select DISTINCT TABLE_NAME,COLUMN_COMMENT,COLUMN_NAME,COLUMN_TYPE,COLUMN_KEY,COLUMN_DEFAULT from INFORMATION_SCHEMA.Columns where table_name=#{tablename} and TABLE_SCHEMA=#{dbname}</sql>
+    </select>
+    <select id="selminispringmodules" in="Map" out="Map">
+        <sql>select * from minispring_modules where type=#{type}</sql>
+    </select>
+</fzjspringjdbc>
