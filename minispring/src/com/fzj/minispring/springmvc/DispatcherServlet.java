@@ -79,7 +79,7 @@ public class DispatcherServlet extends HttpServlet implements DispatcherInterfac
         req.setCharacterEncoding("utf-8");
         resp.setCharacterEncoding("utf-8");
 
-        String url = req.getRequestURI().replaceAll(req.getContextPath(), "");
+         String url = req.getRequestURI().substring(req.getContextPath().length(), req.getRequestURI().length());
         if (!GlobalParam.getMapping().containsKey(url) && !GlobalParam.getStaticResources().containsKey(url)) {
             //404未找到路径
             new MiniSpringLog().printConsoleBlank(DispatcherServlet.class, LogEnum.springmvc.getName("debug"), "url [", url, "] not found");
